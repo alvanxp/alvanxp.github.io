@@ -13,7 +13,7 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: alvaro carpio
+      title: AlvanXP.net
 
 description: Stylish Jekyll Theme
 author:
@@ -23,7 +23,7 @@ author:
   twitter: alvanxp
   pinterest: asd123
   linkedin: asd123
-  bio: Developer!
+  bio: Software Development, War stories, tips!
   email_md5: c1ba47867082f833b80eb79b3ce63a14
 
 rss_path: feed.xml
