@@ -73,12 +73,15 @@ Actualizar los packetes de ubuntu:
 $ sudo apt-get update
 ```	
 Instalacion de Redis Server
+
 ```sh
 $ sudo apt-get install redis-server
 ```		
+
 ## Configuración de Redis Server
 
 Abrir el archivo de configuracion de Redis con el siguiente comando:
+
 ```sh	
 $ sudo nano /etc/redis/redis.conf
 ```	
@@ -88,12 +91,14 @@ $ sudo nano /etc/redis/redis.conf
     #bind 127.0.0.1
 ```		
 - Establecer el siguiente valor :
+
 ```sh	
 	tcp-keepalive 60
 ```			
 **Ctrl + O** para Guardar y **Ctrl + x** para salir del editor
 
 Reiniciar redis con el siguiente query:
+
 ```sh
 $ sudo service redis-server restart
 ```
@@ -101,6 +106,7 @@ $ sudo service redis-server restart
 Test Redis:
 
 Entrar al cliente redis:
+
 ```sh	
 	redis-cli
 ```	
@@ -112,6 +118,7 @@ Agregar un item:
 También podemos instalar una herramienta visual para tener un mayor manejos de los datos , **Redis Desktop Manager**
 
 Para instalar correr el siguiente comando en una consola cmd dentro de windows:
+
 ```sh
 $ choco install redis-desktop-manager
 ```	
