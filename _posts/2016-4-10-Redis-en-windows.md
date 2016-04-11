@@ -36,6 +36,8 @@ choco install vagrant
 
 <img src="{{ site.url }}/assets/content/redis-vagrant/vagrant-install.png" alt="vagrant">
 
+<img src="{{ site.url }}/assets/content/redis-vagrant/vagrant-install2.png" alt="vagrant">
+
 3. **Instalacion de Virtual Box**
 Escribir el siguiente comando en la consola cmd:
 
