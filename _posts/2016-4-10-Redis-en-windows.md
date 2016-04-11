@@ -34,7 +34,7 @@ En la consola cmd escribir el siguiente  comando:
 choco install vagrant
 ```
 
-<img src="{{ site.url }}/assets/content/redis-vagrant/vagrant-install.png" alt="vagrant" style="width:304px;height:228px;">
+<img src="{{ site.url }}/assets/content/redis-vagrant/vagrant-install.png" alt="vagrant">
 
 3. **Instalacion de Virtual Box**
 Escribir el siguiente comando en la consola cmd:
