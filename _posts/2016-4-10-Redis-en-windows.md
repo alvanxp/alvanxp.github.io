@@ -48,9 +48,10 @@ choco install virtualbox
 
 <img src="{{ site.url }}/assets/content/redis-vagrant/virtualbox-install2.png" alt="virtualbox">
 
-<img src="{{ site.url }}/assets/content/redis-vagrant/virtualbox-install3.png" alt="virtualbox">
 
 >Ahora se puede ver en el menu inicio virtualbox recientemente instalado:
+
+<img src="{{ site.url }}/assets/content/redis-vagrant/virtualbox-install3.png" alt="virtualbox">
 
 4. Crear un directorio (c:\vagrant)
 
@@ -76,6 +77,8 @@ Ahora entraremos remotamente  usando SSH:
 ```dosbatch
 vagrant ssh
 ```	
+
+<img src="{{ site.url }}/assets/content/redis-vagrant/ssh_connect.png" alt="ssh">
 
 Actualizar los packetes de ubuntu:
 
@@ -127,6 +130,8 @@ Agregar un item:
 set name "Alvaro Carpio"
 ```
 
+<img src="{{ site.url }}/assets/content/redis-vagrant/redis-test.png" alt="test">
+
 También podemos instalar una herramienta visual para tener un mayor manejos de los datos , **Redis Desktop Manager**
 
 Para instalar correr el siguiente comando en una consola cmd dentro de windows:
@@ -136,11 +141,11 @@ $ choco install redis-desktop-manager
 ```	
 Luego de instalado, abrir Redis Desktop Manager y agregar una nueva conexión de la siguiente manera:
 
-
+<img src="{{ site.url }}/assets/content/redis-vagrant/redismanager_setup.png" alt="redissetup">
 	
 Ahora podemos ver los datos ingresados previamente  en la consola: 
 
-
+<img src="{{ site.url }}/assets/content/redis-vagrant/redismanager_show.png" alt="redis manager">
 	
 
 
