@@ -44,6 +44,11 @@ Escribir el siguiente comando en la consola cmd:
 ```dosbatch
 choco install virtualbox
 ```	
+<img src="{{ site.url }}/assets/content/redis-vagrant/virtualbox-install.png" alt="virtualbox">
+
+<img src="{{ site.url }}/assets/content/redis-vagrant/virtualbox-install2.png" alt="virtualbox">
+
+<img src="{{ site.url }}/assets/content/redis-vagrant/virtualbox-install3.png" alt="virtualbox">
 
 >Ahora se puede ver en el menu inicio virtualbox recientemente instalado:
 
