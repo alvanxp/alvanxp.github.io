@@ -7,8 +7,6 @@ category: Cache
 comments: true
 ---
 
-# Redis en Windows
-
 Alguna vez necesitaste instalar redis en windows? En este blog te mostrare como instalar una vm de Ubuntu con redis (400 Mb +) usando un gestor de entornos (Vagrant) 
 
 ### Herramientas usadas:
@@ -108,9 +106,10 @@ Test Redis:
 Entrar al cliente redis:
 
 ```sh	
-	redis-cli
+$ redis-cli
 ```	
 Agregar un item:
+
 ```sh	
 	set name "Alvaro Carpio"
 ```
