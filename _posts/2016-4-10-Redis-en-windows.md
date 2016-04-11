@@ -29,15 +29,18 @@ c:\> @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object n
 
 2. **Instalación de Vagrant**
 En la consola cmd escribir el siguiente  comando:
+
 ```dosbatch	
 choco install vagrant
 ```
 
 3. **Instalacion de Virtual Box**
 Escribir el siguiente comando en la consola cmd:
+
 ```dosbatch
 choco install virtualbox
 ```	
+
 >Ahora se puede ver en el menu inicio virtualbox recientemente instalado:
 
 4. Crear un directorio (c:\vagrant)
@@ -107,11 +110,12 @@ Entrar al cliente redis:
 
 ```sh	
 $ redis-cli
-```	
+```
+
 Agregar un item:
 
 ```sh	
-	set name "Alvaro Carpio"
+set name "Alvaro Carpio"
 ```
 
 También podemos instalar una herramienta visual para tener un mayor manejos de los datos , **Redis Desktop Manager**
