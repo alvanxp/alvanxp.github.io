@@ -1,6 +1,5 @@
 ﻿---
 tags:
-  - dll
   - ILMerge
 layout: post
 title: 'ILMerge unir dlls'
