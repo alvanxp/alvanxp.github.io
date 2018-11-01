@@ -3,7 +3,12 @@ theme :
   name : dbyll
 ---
 {% include default.html %}
-
+<html>
+  <head>
+    {% include head.html %}
+    {% seo %}
+  </head>
+</html>
 {% if site.google_analytics %}
 <!-- Asynchronous Google Analytics snippet -->
 <script>
