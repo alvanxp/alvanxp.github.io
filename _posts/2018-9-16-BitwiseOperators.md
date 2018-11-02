@@ -40,19 +40,19 @@ Console.WriteLine(bookingOptionsSelected);
 
 El atributo Flags permite aplicar el operador de bits Or entre los atributos, dado que cada item del enumerado tiene un valor binario:
 
-|            | Breakfast | StairFreeAccess | SeaView | EnSuite |
+|            | Breakfast&nbsp;&nbsp; | StairFreeAccess&nbsp;&nbsp; | SeaView&nbsp;&nbsp; | EnSuite&nbsp;&nbsp; |
 |------------|-----------|-----------------|---------|---------|
-| Enum Value | 8         | 4               | 2       | 1       |
-| Breakfast  | 1         | 0               | 0       | 0       |
-| EnSuite    | 0         | 0               | 1       | 0       |
+| **Enum Value**&nbsp;&nbsp; | 8         | 4               | 2       | 1       |
+| **Breakfast**&nbsp;&nbsp;  | 1         | 0               | 0       | 0       |
+| **EnSuite**&nbsp;&nbsp;    | 0         | 0               | 1       | 0       |
 
 se eligieron dos valores Breakfast con valor 8 y en binario 1000 y EnSuite con valor 2 y en binario 0010, entonces necesitamos combinar los valores en un solo byte
 
 | &nbsp;       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 |-----------------|---|---|---|---|
-| Breakfast       | 1 | 0 | 0 | 0 |
-| EnSuite         | 0 | 0 | 1 | 0 |
-| Combine with OR | 1 | 0 | 1 | 0 |
+| **Breakfast**&nbsp;&nbsp;       | 1 | 0 | 0 | 0 |
+| **EnSuite**&nbsp;&nbsp;         | 0 | 0 | 1 | 0 |
+| **Combine with OR**&nbsp;&nbsp; | 1 | 0 | 1 | 0 |
 
 El nuevo valor contiene ambos valores del enumerado en una sola variable
 
@@ -64,9 +64,9 @@ Esto lo podemos saber usando el operador de bits AND
 
 | &nbsp;       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 |-----------------|---|---|---|---|
-| bookingOptionsSelected       | 1 | 0 | 1 | 0 |
-| Breakfast       | 1 | 0 | 0 | 0 |
-| resultado op AND | 1 | 0 | 0 | 0 |
+| **bookingOptionsSelected**&nbsp;&nbsp;| 1 | 0 | 1 | 0 |
+| **Breakfast**       | 1 | 0 | 0 | 0 |
+| **resultado op AND** | 1 | 0 | 0 | 0 |
 
 la operacion es la siguiente:
 
