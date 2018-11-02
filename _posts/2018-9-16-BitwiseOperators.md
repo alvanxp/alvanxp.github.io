@@ -8,16 +8,16 @@ category: c#
 comments: true
 ---
 
-# C# Bitwise Operators
+# C# Bitwise Operators - Parte I
 
-Entender la manipulación de bits es util en escenario donde tenemos que usar menos cantidad de memoria para guardar datos
+Entender la manipulación de bits es util en escenario donde tenemos que usar menos cantidad de memoria para guardar datos o estados
 
-## Attributo Flag
-El Attributo Flag permite el poder 
+## Attributo Flags
 
+El Attributo Flags permite poder usar más de una option del enumerado y almacearlo en una variable, Por ejemplo el siguiente enum:
 
 ```csharp
-[Flag]
+[Flags]
 public enum BookingOptions
 {
   None = 0,
@@ -29,38 +29,55 @@ public enum BookingOptions
 
 ```
 
-## Configuración 
+Dados los valores del enum, podemos elegir uno o varios valores del enum, por ejemplo:
 
-Una vez instalado el package podremos encontrar el ejecutable ilmerge.exe dentro de la carpeta package, copiarlo dentro del directorio del proyecto
+```csharp
+BookingOptions bookingOptionsSelected = BookingOptions.SeaView | BookingOptions.Breakfast;
 
-## Uso
-Tenemos un proyecto de libreria de clases MyLibrary la cual usa StructureMap.dll , StructureMap.AutoMocking.dll y  Rhino.Mocks.dll, ejecutando la siguiente linea de comnandos se lograra unir todas las librerias en una sola dentro del directorio Deploy: MyLibrary.dll
-
-```dosbatch
-ILMerge.exe /t:library /out:'Deploy/MyLibrary.dll'
-  'MyLibrary.dll'
-  'StructureMap.dll'
-  'StructureMap.AutoMocking.dll'
-  'Rhino.Mocks.dll'
-```
-## Problemas comunes
-
-Cuando distribuimos nuestra libreria puede ocurrir el siguiente problema, puede que en el proyecto donde se use nuestra dll también se este usando la misma libreria de un tercero que usamos previamente, lo cual originaria un problema de referencias en algunos casos, para resolver esto ilmerge provee el comando **internalize** para cambiar todos los metodos y clases **public** a **internal** y la posibilidad de excluir las dlls que querramos usando un archivo de texto
-
-```dosbatch
-ILMerge.exe /t:library /internalize:'Build/ILMergeIncludes.txt' /out:'Deploy/MyLibrary.dll'
-  'MyLibrary.dll'
-  'StructureMap.dll'
-  'StructureMap.AutoMocking.dll'
-  'Rhino.Mocks.dll'
+Console.WriteLine(bookingOptionsSelected);
+//Output: SeaView, Breakfast
 ```
 
-ILMergeIncludes.txt:
+## Detras de escena
 
-```sh
-StructureMap
-StructureMap.AutoMocking
-Rhino.Mocks
-```	
+El atributo Flags permite aplicar el operador de bits Or ("|") entre los atributos, dado que cada item del enumerado tiene un valor binario:
+|            | Breakfast | StairFreeAccess | SeaView | EnSuite |
+|------------|-----------|-----------------|---------|---------|
+| Enum Value | 8         | 4               | 2       | 1       |
+| Breakfast  | 1         | 0               | 0       | 0       |
+| EnSuite    | 0         | 0               | 1       | 0       |
 
-De esta forma solo los metodos y clases de nuestra dll quedan públicas para ser usadas 
+se eligieron dos valores Breakfast con valor 8 y en binario 1000 y EnSuite con valor 2 y en binario 0010, entonces necesitamos combinar los valores en un solo byte
+| &nbsp;       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+|-----------------|---|---|---|---|
+| Breakfast       | 1 | 0 | 0 | 0 |
+| EnSuite         | 0 | 0 | 1 | 0 |
+| Combine with OR | 1 | 0 | 1 | 0 |
+
+El nuevo valor contiene ambos valores del enumerado en una sola variable
+
+## Verificacion de valores
+
+Luego de tener una variable con ambos valores, la pregunta es como podemos saber que valores contiene.
+
+Esto lo podemos saber usando el operador de bits AND ("&")
+| &nbsp;       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+|-----------------|---|---|---|---|
+| bookingOptionsSelected       | 1 | 0 | 1 | 0 |
+| Breakfast       | 1 | 0 | 0 | 0 |
+| resultado op AND | 1 | 0 | 0 | 0 |
+
+la operacion es la siguiente:
+
+1. Tenemos la variable "bookingOptionsSelected" con los dos valores del enumerado
+2. Tenemos el valor que queremos verificar ("Breakfast") que se encuentre dentro de la variable
+3. Si el valor resultante de aplicar el operador AND entre el valor de la variable y el valor a verificar es igual al valor a verificar entonces la variable "bookingOptionsSelected" si contiene el valor Breakfast
+
+la verificacion en c#:
+
+```csharp
+if ((bookingOptionsSelected & BookingOptions.Breakfast) != 0)
+{
+  //....
+}
+```
