@@ -3,7 +3,7 @@ tags:
   - c#
   - bitwise operators
 layout: post
-title: 'Bitwise Operators - Parte I'
+title: 'Bitwise Operations - Parte I'
 category: c#
 comments: true
 ---
