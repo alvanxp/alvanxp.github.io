@@ -47,6 +47,7 @@ El atributo Flags permite aplicar el operador de bits Or entre los atributos, da
 | EnSuite    | 0         | 0               | 1       | 0       |
 
 se eligieron dos valores Breakfast con valor 8 y en binario 1000 y EnSuite con valor 2 y en binario 0010, entonces necesitamos combinar los valores en un solo byte
+
 | &nbsp;       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 |-----------------|---|---|---|---|
 | Breakfast       | 1 | 0 | 0 | 0 |
