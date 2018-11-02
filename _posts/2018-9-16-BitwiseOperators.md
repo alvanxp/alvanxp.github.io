@@ -1,7 +1,7 @@
 ---
 tags:
   - c#
-  - bitwise operators
+  - bitwise operations
 layout: post
 title: 'Bitwise Operations - Parte I'
 category: c#
