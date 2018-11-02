@@ -40,7 +40,7 @@ Console.WriteLine(bookingOptionsSelected);
 
 ## Detras de escena
 
-El atributo Flags permite aplicar el operador de bits Or ("|") entre los atributos, dado que cada item del enumerado tiene un valor binario:
+El atributo Flags permite aplicar el operador de bits Or (|) entre los atributos, dado que cada item del enumerado tiene un valor binario:
 |            | Breakfast | StairFreeAccess | SeaView | EnSuite |
 |------------|-----------|-----------------|---------|---------|
 | Enum Value | 8         | 4               | 2       | 1       |
@@ -60,7 +60,7 @@ El nuevo valor contiene ambos valores del enumerado en una sola variable
 
 Luego de tener una variable con ambos valores, la pregunta es como podemos saber que valores contiene.
 
-Esto lo podemos saber usando el operador de bits AND ("&")
+Esto lo podemos saber usando el operador de bits AND (&)
 | &nbsp;       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 |-----------------|---|---|---|---|
 | bookingOptionsSelected       | 1 | 0 | 1 | 0 |
