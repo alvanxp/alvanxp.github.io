@@ -3,16 +3,14 @@ tags:
   - c#
   - bitwise operators
 layout: post
-title: 'C# Bitwise Operators'
+title: 'Bitwise Operators - Parte I'
 category: c#
 comments: true
 ---
 
-# C# Bitwise Operators - Parte I
-
 Entender la manipulación de bits es util en escenario donde tenemos que usar menos cantidad de memoria para guardar datos o estados
 
-## Attributo Flags
+# Attributo Flags
 
 El Attributo Flags permite poder usar más de una option del enumerado y almacearlo en una variable, Por ejemplo el siguiente enum:
 
@@ -61,7 +59,8 @@ El nuevo valor contiene ambos valores del enumerado en una sola variable
 
 Luego de tener una variable con ambos valores, la pregunta es como podemos saber que valores contiene.
 
-Esto lo podemos saber usando el operador de bits AND 
+Esto lo podemos saber usando el operador de bits AND
+
 | &nbsp;       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 |-----------------|---|---|---|---|
 | bookingOptionsSelected       | 1 | 0 | 1 | 0 |
